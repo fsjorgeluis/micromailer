@@ -1,0 +1,2 @@
+# micromailer
+Nodejs mailer microservice
