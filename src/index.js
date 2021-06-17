@@ -4,10 +4,10 @@ import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 // Public and protected routes
 import sendRoute from './routes/sendRoute.js';
 
-const app = express();
-const PORT = process.env.PORT || 4000;
-
 dotenv.config();
+
+const app = express();
+const port = process.env.PORT || 4000;
 
 app.use(express.json());
 
@@ -31,6 +31,6 @@ app.use('/send', sendRoute);
 app.use(notFound);
 app.use(errorHandler);
 
-app.listen({ port: PORT }, () => {
-    console.log(`🚀 Service in ${process.env.NODE_ENV} mode, ready at http://localhost:${PORT}`)
+app.listen({ port: port }, () => {
+    console.log(`🚀 Service in ${process.env.NODE_ENV} mode, ready at http://localhost:${port}`)
 });
