@@ -29,8 +29,8 @@ app.get('/', (req, res) => {
     });
     res.end();
 });
-
-app.use('/send', cors(corsOptions), sendRoute);
+// cors(corsOptions),
+app.use('/send', sendRoute);
 
 app.use(notFound);
 app.use(errorHandler);
