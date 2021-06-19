@@ -1,5 +1,5 @@
 import express from 'express';
-import cors from 'cors';
+// import cors from 'cors';
 import dotenv from 'dotenv';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 // Public and protected routes
@@ -9,9 +9,9 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 4000;
-const corsOptions = {
-    origin: process.env.CORS_ORIGIN
-};
+// const corsOptions = {
+//     origin: process.env.CORS_ORIGIN
+// };
 
 app.use(express.json());
 
