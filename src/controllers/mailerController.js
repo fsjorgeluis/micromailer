@@ -23,14 +23,14 @@ export const sendMail = asyncHandler(async (req, res) => {
         subject: 'Email sent with SendGrid from portfolio',
         text: `Hey, i'm ${name}, this is my email: ${email}, 
             and wanna leave you a message: ${message}.
-            If i decide to hire you, this are some services that i need an the budget to make it done
-            Services: ${services}.
+            If i decide to hire you, these are some services that i need an the budget to make it done
+            Services: ${services}
             Budget: ${budget}`,
         html: `<div>
             Hey, i'm <strong>${name}</strong>,<br>
             this is my email: <strong>${email}</strong>,<br> 
             and wanna leave you a message: <i>${message}</i><br>
-            If i decide to hire you, this are some services that i need an the budget to make it done <br>
+            If i decide to hire you, these are some services that i need an the budget to make it done <br>
             <strong>Services:</strong> <i>${services}</i>.<br>
             <strong>Budget:</strong> <i>${budget}</i>
             </div>`,
